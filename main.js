@@ -37,9 +37,9 @@ function showSlide(index) {
   }
 
   if (audioSlides.includes(index) && index === 0) {
-    audioPlayer.volume = 1;
-  } else if (audioSlides.includes(index)) {
     audioPlayer.volume = 0.3;
+  } else if (audioSlides.includes(index)) {
+    audioPlayer.volume = 0.2;
   }
 
   if (index === bipSlide) {

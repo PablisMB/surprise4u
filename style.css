@@ -76,6 +76,13 @@
 
 .slide.active {
   display: block;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
 }
 
 .slide-title {
@@ -201,4 +208,9 @@
   background: red;
   color: #fff;
   border-radius: 30px;
+}
+
+#youtubelive iframe {
+  width: 100%;
+  height: 100%;
 }
