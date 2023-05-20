@@ -5,7 +5,8 @@ const arrowRight = document.getElementById("right");
 const audioPlayer = new Audio("./intromusic.mp3");
 const bipSound = new Audio("./bipad.mp3");
 const audioSlides = [0, 1, 2, 3];
-const bipSlide = 5;
+const zeroSound = [1];
+const bipSlide = 7;
 let currentSlide = 0;
 
 showSlide(currentSlide);
@@ -37,9 +38,13 @@ function showSlide(index) {
   }
 
   if (audioSlides.includes(index) && index === 0) {
-    audioPlayer.volume = 0.3;
+    audioPlayer.volume = 0.1;
   } else if (audioSlides.includes(index)) {
-    audioPlayer.volume = 0.2;
+    audioPlayer.volume = 0.05;
+  }
+
+  if (zeroSound.includes(index)) {
+    audioPlayer.volume = 0;
   }
 
   if (index === bipSlide) {
