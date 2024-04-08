@@ -5,114 +5,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Presentation</title>
+    <title>4u</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="header">
-        <div class="header-title">International News Programme</div>
-        <div class="header-subtitle">Presentation by Gonzalo Lavega, Ana Perianes & Pablo Merino</div>
-        <div class="header-subtitle">Please stand by until we have all set up, thanks</div>
-        <div class="header-tinytitle">Website made with ♥ by @pablismb</div>
+        <div class="header-title">?</div>
+        <div class="header-subtitle">Para ti</div>
+        <div class="header-subtitle">Descubre tu regalo</div>
+        <div class="header-tinytitle">ggm & pmb</div>
 
-        <button class="header-button">Start</button>
-    </div>
-    <div class="slide active">
-        <div class="title-container">
-
-        </div>
-        <div class="slide-content" id="international-cover">
-            <div class="slide-title">International news</div>
-            <div class="slide-subtitle">Breaking news</div>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title">Elon Musk in Mérida</div>
-            <div class="header-tinytitle">(5 seconds delay)</div>
-
-        </div>
-        <div class="slide-content" id="youtubelive"> <iframe src="https://www.youtube.com/embed/5axfSUcVIgE"
-                title="test" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title">Kind stranger pays for bills</div>
-        </div>
-        <div class="slide-content" id="kindstranger"></div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title">They haven't seen each other for 75 years</div>
-        </div>
-        <div class="slide-content" id="siblings"></div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title" id="livestreaming-span">Breaking News: Live from Mérida</div>
-        </div>
-        <div class="slide-content" id="livestream"></div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title">LIVE: Special correspondent</div>
-            <div class="header-tinytitle">(5 seconds delay)</div>
-
-        </div>
-        <div class="slide-content" id="youtubelive"> <iframe src="https://www.youtube.com/embed/5axfSUcVIgE"
-                title="test" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title">Scientists shocked: A cure for cancer!</div>
-        </div>
-        <div class="slide-content" id="cureforcancer">
-            <img src="./cureforcancer.jpg">
-        </div>
-    </div>
-
-    <div class="slide">
-        <div class="title-container">
-            <div class="slide-title">Commercial break</div>
-        </div>
-        <div class="slide-content" id="ad">
-            <form action="https://pablismb.github.io/taibombsrebirth.github.io/indexen.html" target="_blank">
-                <button class="ad-site"></button>
-            </form>
-        </div>
-    </div>
-
-    <div class="slide" id="weather">
-        <div class="title-container">
-            <div class="slide-title">Weather forecast</div>
-        </div>
-        <div class="slide-content" id="weatherforecast">
-            <form action="https://www.windy.com/es/-Nubes-clouds?clouds,2023052406,39.724,-3.966,6" target="_blank">
-                <button class="ad-site" id="weather-button"></button>
-            </form>
-        </div>
+        <button onclick="overflowOn()" class="header-button">Empezamos?</button>
     </div>
 
     <div class="slide active">
-        <div class="title-container">
+        <h1>Bueno...</h1>
+        <p class="first">Con que has llegado hasta aquí...</p>
+        <p class="first">Sinceramente, no esperabamos menos de ti.</p>
+        <p class="first">Cuando leas esto espero que no estes nerviosa ni
+            nada...</p>
+        <p class="first">Supongo que ya sabrás lo que es. Si no lo sabes todavía, no te preocupes.</p>
+        <p>Si respondes unas preguntas, descubrirás tu regalo...</p>
+        <p>Necesitaras acertar 8 de las preguntas...</p>
+        <div class="trato-container">
+            <p class="center"><span class="trato">¿Trato?</span></p>
+            <div class="choose">
+                <button class="choose-button yes">Sí</button>
+                <button class="choose-button no">No</button>
+            </div>
+            <div class="sign hidden">
+                <p>Entonces firma para empezar...</p>
+                <canvas id="signature-pad" width="300" height="150"></canvas>
+                <div class="signature-buttons-container">
+                    <button id="clear">Borrar</button>
+                    <button id="save">Guardar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="slide">
+        <p class="first">No esperábamos menos de ti :)) </p>
+        <p class="titulo-p">PRIMERA PREGUNTA</p>
+        <p class="subtitle-p">¿Qué pasó el 12 de septiembre de 2023?</p>
+        <p class="comment-p">Va, esta es fácil</p>
+        <div class="pregunta">
+            <div class="opcion-container"> <span class="opcion">a</span><button class="pregunta-button10" id="11">Pablo
+                    se
+                    cayó
+                    por las escaleras</button></div>
+            <div class="opcion-container"> <span class="opcion">b</span><button class="pregunta-button10" id="12">Gloria
+                    se
+                    confundió de clase</button></div>
+            <div class="opcion-container"><span class="opcion">c</span><button class="pregunta-button10" id="13">Nos
+                    vimos
+                    todos
+                    por primera vez</button></div>
+            <div class="opcion-container"><span class="opcion">d</span><button class="pregunta-button10" id="14">Un día
+                    más y
+                    ya</button></div>
 
         </div>
-        <div class="slide-content" id="international-cover">
-            <div class="slide-title">Thanks for watching!</div>
+    </div>
+    <div class="slide">
+        <p class="first">¿La habrás tenido bien no?</p>
+        <p class="titulo-p">SEGUNDA PREGUNTA</p>
+        <p class="subtitle-p">¿Si Gloria tuviera que elegir un álbum entre los siguientes cuál sería?</p>
+        <p class="comment-p">Veamos...</p>
+        <div class="pregunta">
+            <div class="opcion-container"> <span class="opcion">a</span><button class="pregunta-button20"
+                    id="21">...</button></div>
+            <div class="opcion-container"> <span class="opcion">b</span><button class="pregunta-button20"
+                    id="22">...</button></div>
+            <div class="opcion-container"><span class="opcion">c</span><button class="pregunta-button20"
+                    id="23">...</button></div>
+            <div class="opcion-container"><span class="opcion">d</span><button class="pregunta-button20"
+                    id="24">...</button></div>
         </div>
+    </div>
+    <div class="slide">
+        <p class="first">¿Muy complicado?</p>
+        <p class="titulo-p">TERCERA PREGUNTA</p>
+        <p class="subtitle-p">¿Si Pablo tuviera que elegir un álbum entre los siguientes cuál sería?</p>
+        <p class="comment-p">Ahora me toca a mí jeje...</p>
+        <div class="pregunta">
+            <div class="opcion-container"> <span class="opcion">a</span><button class="pregunta-button30" id="31">Who
+                    really cares - TV Girl</button></div>
+            <div class="opcion-container"> <span class="opcion">b</span><button class="pregunta-button30"
+                    id="32">Paruosia - XI</button></div>
+            <div class="opcion-container"><span class="opcion">c</span><button class="pregunta-button30" id="33">A day
+                    at the races - Queen</button></div>
+            <div class="opcion-container"><span class="opcion">d</span><button class="pregunta-button30"
+                    id="34">Finisterra - Mägo de Oz</button></div>
+        </div>
+    </div>
+    <div class="slide">
+        <p class="first">Esa era complicadita la verdad jsjsjs</p>
+        <p class="titulo-p">CUARTA PREGUNTA</p>
+        <p class="subtitle-p">...</p>
+        <p class="comment-p">...</p>
+        <div class="pregunta">
+            <div class="opcion-container"> <span class="opcion">a</span><button class="pregunta-button40"
+                    id="41">...</button></div>
+            <div class="opcion-container"> <span class="opcion">b</span><button class="pregunta-button40"
+                    id="42">...</button></div>
+            <div class="opcion-container"><span class="opcion">c</span><button class="pregunta-button40"
+                    id="43">...</button></div>
+            <div class="opcion-container"><span class="opcion">d</span><button class="pregunta-button40"
+                    id="44">...</button></div>
+        </div>
+    </div>
+    <div class="slide">
+        <p>No esperábamos menos de ti</p>
+    </div>
+
+    <div class="contador">
+        Tu puntuación:
+        <div class="contador-value"> </div>
     </div>
 
     <div class="arrow-container" id="left">

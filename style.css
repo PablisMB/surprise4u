@@ -4,7 +4,20 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  overflow: hidden;
+  background-color: #e5e5f7;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #e5e5f7 80px
+    ),
+    repeating-linear-gradient(#a06cd555, #a06cd5);
 }
 
 .header {
@@ -74,36 +87,13 @@
   display: none;
 }
 
-#weather .slide-content {
-  background-size: cover;
-  /* resize cover */
-
-  background-repeat: no-repeat;
-  animation: backgroundTransition 15s infinite;
-  background-position: center;
-  background-image: url(./cs1.jpg);
-}
-
-@keyframes backgroundTransition {
-  0% {
-    background-image: url(./cs1.jpg);
-  }
-  50% {
-    background-image: url(./cs2.jpg);
-  }
-  100% {
-    background-image: url(./cs3.jpg);
-  }
-}
-
 .slide.active {
   display: block;
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   transition: 0.5s;
 }
 
@@ -112,6 +102,7 @@
   text-align: center;
   font-size: 30px;
   font-weight: 600;
+  word-break: break-all;
 }
 
 .arrow {
@@ -169,84 +160,199 @@
   transition: 0.5s;
 }
 
-#ad {
-  background: url("./adfondo.png") no-repeat center center/cover;
+.slide {
+  display: none;
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
 }
 
-#ad form {
-  height: 100%;
-  width: 100%;
+h1 {
+  font-weight: 600;
 }
 
-#ad button {
-  height: 100%;
+.line-b {
   width: 100%;
-  opacity: 0;
+  margin: 10px 0;
+  height: 3px;
+  background: #6d6d6d;
+}
+
+.first {
+  margin: 10px 0;
+}
+
+.trato {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  z-index: 1;
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.choose {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  transition: all 0.5s;
+}
+
+.choose-button {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  z-index: 1;
+  padding: 10px 20px;
+  border: 3px solid #e5e5e5;
+  border-radius: 50px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 
-#weatherforecast form {
-  width: 100%;
-  height: 100%;
+.choose-button:hover {
+  background: #000;
+  color: #fff;
 }
 
-#weatherforecast button {
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  cursor: pointer;
+.choose-button:active {
+  background: #000;
+  color: #fff;
 }
 
-#international-cover {
+#signature-pad {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background: #e5e5e5;
+  border-radius: 10px;
+  box-shadow: 12px 10px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
 }
 
-#international-cover .slide-title {
-  font-size: 50px;
+.signature-buttons-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.sign button {
+  padding: 10px 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hidden {
+  display: none;
+}
+
+.sign p {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  z-index: 1;
+  margin-top: 30px;
+}
+
+.trato-container {
+  margin-top: 50px;
+  transition: all 0.5s;
+}
+
+.pregunta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.opcion-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.opcion {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: 600;
 }
 
-#international-cover .slide-subtitle {
-  font-size: 35px;
-  padding: 15px;
-  background: red;
+.pregunta button {
+  font-size: 15px;
+  text-align: center;
+  z-index: 1;
+  padding: 10px 20px;
+  border: 3px solid #e5e5e5;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.pregunta button:hover {
+  background: #000000;
   color: #fff;
-  border-radius: 30px;
 }
 
-#siblings {
-  background: url("./siblings.jpeg") no-repeat center center/cover;
+.titulo-p {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  z-index: 1;
+  margin-top: 30px;
 }
 
-#kindstranger {
-  background: url("./hospitalbill.jpg") no-repeat center center/cover;
+.subtitle-p {
+  font-size: 15px;
+  font-weight: 800;
+  text-align: center;
+  z-index: 1;
+  margin-top: 10px;
 }
 
-#cureforcancer img {
-  width: 100%;
-  object-fit: cover;
+.comment-p {
+  font-size: 15px;
+  font-weight: 300;
+  text-align: center;
+  z-index: 1;
+  margin-top: 10px;
 }
 
-#livestream {
-  background: url("./disisilonmisk.jpeg") no-repeat center center/cover;
+.contador {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  bottom: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
 }
 
-#livestreaming-span {
+.contador-value {
   font-size: 30px;
   font-weight: 600;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  padding: 10px;
-  background: red;
-  color: #fff;
-  border-radius: 30px;
-}
-
-#youtubelive iframe {
-  width: 100%;
-  height: 100%;
+  z-index: 1;
+  margin-top: 10px;
 }
