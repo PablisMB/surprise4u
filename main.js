@@ -122,6 +122,7 @@ function showSlide(index) {
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
+    contador.style.bottom = "10px";
   }
 
   if (slides[index] === slides[13]) {
@@ -130,6 +131,7 @@ function showSlide(index) {
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
+    contador.style.bottom = "10px";
   }
 
   if (slides[index] === slides[14]) {
@@ -138,6 +140,7 @@ function showSlide(index) {
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
+    contador.style.bottom = "10px";
   }
 }
 
