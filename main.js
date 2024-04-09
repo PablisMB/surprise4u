@@ -29,7 +29,7 @@ function showSlide(index) {
 
   if (slides[index] === slides[1]) {
     contador.style.display = "block";
-    slides[index].style.height = "80%";
+    slides[index].style.height = "90%";
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
@@ -37,7 +37,7 @@ function showSlide(index) {
 
   if (slides[index] === slides[2]) {
     contador.style.display = "block";
-    slides[index].style.height = "80%";
+    slides[index].style.height = "90%";
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
@@ -45,7 +45,7 @@ function showSlide(index) {
 
   if (slides[index] === slides[3]) {
     contador.style.display = "block";
-    slides[index].style.height = "80%";
+    slides[index].style.height = "90%";
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
@@ -53,7 +53,7 @@ function showSlide(index) {
 
   if (slides[index] === slides[4]) {
     contador.style.display = "block";
-    slides[index].style.height = "80%";
+    slides[index].style.height = "90%";
     slides[index].style.top = "49%";
     body.style.overflow = "hidden";
     arrowLeft.style.display = "none";
