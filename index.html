@@ -10,6 +10,10 @@
 </head>
 
 <body>
+    <div class="password-container">
+        <input type="password" class="passcode" placeholder="Contraseña" id="passcode">
+        <button class="passcode-button" id="passcode-button">Entrar</button>
+    </div>
     <div class="header">
         <div class="header-title">?</div>
         <div class="header-subtitle">Para ti</div>
@@ -19,7 +23,7 @@
         <button onclick="overflowOn()" class="header-button">Empezamos?</button>
     </div>
 
-    <div class="slide active">
+    <div class="slide slide1 active">
         <h1>Bueno...</h1>
         <p class="first">Con que has llegado hasta aquí...</p>
         <p class="first">Sinceramente, no esperabamos menos de ti.</p>
@@ -28,6 +32,7 @@
         <p class="first">Supongo que ya sabrás lo que es. Si no lo sabes todavía, no te preocupes.</p>
         <p>Si respondes unas preguntas, descubrirás tu regalo...</p>
         <p>Necesitaras acertar 8 de las preguntas...</p>
+        <p>Una mal, te resta una bien. Puedes tener puntos negativos y todo...</p>
         <div class="trato-container">
             <p class="center"><span class="trato">¿Trato?</span></p>
             <div class="choose">
@@ -217,13 +222,30 @@
     </div>
 
     <div class="slide">
+        <p class="first">¿Qué le hacemos al coche?</p>
+        <p class="titulo-p">UNDÉCIMA PREGUNTA</p>
+        <p class="subtitle-p">¿Cómo se llama mi paquete de stickers de WhatsApp?</p>
+        <p class="comment-p">Más memoria</p>
+        <div class="pregunta">
+            <div class="opcion-container"> <span class="opcion">a</span><button class="pregunta-button110" id="111">elsa
+                    - pato</button></div>
+            <div class="opcion-container"> <span class="opcion">b</span><button class="pregunta-button110" id="112">mi -
+                    You</button></div>
+            <div class="opcion-container"><span class="opcion">c</span><button class="pregunta-button110"
+                    id="113">buenos dias - si</button></div>
+            <div class="opcion-container"><span class="opcion">d</span><button class="pregunta-button110" id="114">tu
+                    madre - tu madre</button></div>
+        </div>
+    </div>
+
+    <div class="slide">
         <p class="first">Esta vale por 3 puntos</p>
         <p class="titulo-p">ÚLTIMA PREGUNTA</p>
         <p class="subtitle-p">Patrón de mi móvil</p>
         <p class="comment-p">Tienes comodín de preguntar si estás muy en apuros</p>
         <div class="pregunta">
             <div class="opcion-container">
-                <input type="number" id="numericInput" class="pregunta-button110"
+                <input type="number" id="numericInput" class="pregunta-buttonlast"
                     oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
                     maxlength="4">
             </div>
@@ -234,7 +256,7 @@
                 <div class="stars">*</div>
             </div>
             <div class="send-container">
-                <button class="pregunta-button110" id="sendButton">Enviar</button>
+                <button class="pregunta-buttonlast" id="sendButton">Enviar</button>
             </div>
             <div class="intentos-container">
                 <p class="intentos">
@@ -244,7 +266,7 @@
         </div>
     </div>
 
-    <div class="slide">
+    <div class="slide slide1">
         <h1>Hasta aquí</h1>
         <p class="first">Hayas pasado o no este pequeño examen / test / prueba o como prefieras llamarlo, <span
                 class="love bold">te queremos</span></p>
@@ -252,16 +274,18 @@
         <p class="first">Nunca por favor</p>
         <p class="first">Venga, ahora vas conmigo y con Gloria a recoger lo que es tuyo</p>
         <p class="first">Felicidades <span class="lila bold">Queen.</span> (Carla)</p>
+        <p class="second">Es un tocadiscos, <span class="bold">tu </span>tocadiscos:)</p>
         <iframe style="border-radius:12px"
             src="https://open.spotify.com/embed/track/0GjEhVFGZW8afUYGChu3Rr?utm_source=generator" width="100%"
             height="152" frameBorder="0" allowfullscreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <p class="first">- Gloria y tu renacuajo Pablo</p>
         <p class="second">Aunque pareza que esto parezca una cosa cutre, simple y fácil de hacer, te quiero decir que
-            esto lo he hecho con todo el amor y cariño para tí, en total han sido sobre 18 horas arriba o abajo (1446
-            líneas de código con sus 33591 caracteres), pero
+            esto lo he hecho con todo el amor y cariño para tí, en total han sido sobre 18 horas arriba o abajo (1617
+            líneas de código con sus 37187 caracteres), pero
             han merecido la pena:) - pablis:)</p>
     </div>
+
     <div class="contador">
         Tu puntuación:
         <div class="contador-value"> </div>

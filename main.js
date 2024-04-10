@@ -22,10 +22,6 @@ function showSlide(index) {
   //   arrowLeft.style.display = "block";
   // }
 
-  if (slides[index] === slides[slides.length - 1]) {
-    arrowRight.style.display = "none";
-  }
-
   slides[index].classList.add("active");
 
   if (slides[index] === slides[1]) {
@@ -117,30 +113,33 @@ function showSlide(index) {
   }
 
   if (slides[index] === slides[12]) {
+    body.style.overflow = "scroll";
     contador.style.display = "block";
-    slides[index].style.height = "90%";
-    slides[index].style.top = "49%";
-    body.style.overflow = "hidden";
+    slides[index].style.height = "100%";
+    slides[index].style.top = "60%";
     arrowLeft.style.display = "none";
     contador.style.bottom = "10px";
   }
 
   if (slides[index] === slides[13]) {
     contador.style.display = "block";
-    slides[index].style.height = "90%";
-    slides[index].style.top = "49%";
-    body.style.overflow = "hidden";
+    slides[index].style.top = "60%";
     arrowLeft.style.display = "none";
+    arrowRight.style.display = "block";
     contador.style.bottom = "10px";
   }
 
   if (slides[index] === slides[14]) {
     contador.style.display = "block";
     slides[index].style.height = "90%";
-    slides[index].style.top = "49%";
-    body.style.overflow = "hidden";
+    slides[index].style.top = "60%";
     arrowLeft.style.display = "none";
+    arrowRight.style.display = "block";
     contador.style.bottom = "10px";
+  }
+
+  if (slides[index] === slides[slides.length - 1]) {
+    arrowRight.style.display = "block";
   }
 }
 
@@ -164,11 +163,11 @@ arrows.forEach((arrow) => {
 
 const startButton = document.querySelector(".header-button");
 const header = document.querySelector(".header");
+const passwordContainer = document.querySelector(".password-container");
 
 startButton.addEventListener("click", () => {
-  header.style.zIndex = 0;
-  header.style.opacity = 0;
-  header.style.pointerEvents = "none";
+  passwordContainer.classList.add("active");
+  header.style.filter = "blur(5px)";
 });
 
 const buttonNo = document.querySelector(".no");
@@ -189,6 +188,10 @@ buttonYes.addEventListener("click", () => {
 
 saveButton.addEventListener("click", () => {
   arrowRight.style.display = "block";
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
 
 let scale = 1;
@@ -259,6 +262,7 @@ function clearCanvas() {
 
 const clearButton = document.getElementById("clear");
 
+let index = 0; // Declare the index variable
 clearButton.addEventListener("click", clearCanvas);
 
 let contadorValue = 0;
@@ -267,7 +271,11 @@ contadorValueCont.textContent = contadorValue;
 
 const preguntabuttons = document.querySelectorAll(".pregunta-button");
 arrowRight.addEventListener("click", () => {
-  arrowRight.style.display = "none";
+  if (slides[index] === slides[slides.length - 2]) {
+    arrowRight.style.display = "block";
+  } else {
+    arrowRight.style.display = "none";
+  }
   preguntabuttons.forEach((button) => {
     button.style.pointerEvents = "auto";
     button.style.backgroundColor = "#e5e5e5";
@@ -715,6 +723,54 @@ function showAnswer100() {
   arrowRight.style.display = "block";
 }
 
+// Pregunta 11
+const respuesta111 = document.getElementById("111");
+const respuesta112 = document.getElementById("112");
+const respuesta113 = document.getElementById("113");
+const respuesta114 = document.getElementById("114");
+
+// Correcta 112
+
+respuesta111.addEventListener("click", () => {
+  contadorValue--;
+  contadorValueCont.textContent = contadorValue + " / 8";
+  showAnswer110();
+});
+
+respuesta112.addEventListener("click", () => {
+  contadorValue++;
+  contadorValueCont.textContent = contadorValue + " / 8";
+  showAnswer110();
+});
+
+respuesta113.addEventListener("click", () => {
+  contadorValue--;
+  contadorValueCont.textContent = contadorValue + " / 8";
+  showAnswer110();
+});
+
+respuesta114.addEventListener("click", () => {
+  contadorValue--;
+  contadorValueCont.textContent = contadorValue + " / 8";
+  showAnswer110();
+});
+
+function showAnswer110() {
+  const respuestas110 = document.querySelectorAll(".pregunta-button110");
+  respuestas110.forEach((respuesta) => {
+    if (respuesta !== respuesta112) {
+      respuesta.style.pointerEvents = "none";
+      respuesta112.style.pointerEvents = "none";
+      respuesta.style.backgroundColor = "red";
+    } else {
+      respuesta112.style.backgroundColor = "#91ff02";
+    }
+    respuesta.style.color = "#fff";
+  });
+  document.body.style.overflowX = "scroll";
+  arrowRight.style.display = "block";
+}
+
 const numericInput = document.getElementById("numericInput");
 const sendButton = document.getElementById("sendButton");
 const intentosValue = document.querySelector(".intentos-value");
@@ -745,5 +801,22 @@ sendButton.addEventListener("click", () => {
       contadorValueCont.textContent = "120923" + " / 8";
       arrowRight.style.display = "block";
     }
+  }
+});
+
+const passcodeInput = document.getElementById("passcode");
+const submitButton = document.getElementById("passcode-button");
+const correctPasscode = "i feel like a millionaire";
+
+submitButton.addEventListener("click", () => {
+  const enteredPasscode = passcodeInput.value.toLowerCase();
+  if (enteredPasscode === correctPasscode) {
+    passwordContainer.classList.remove("active");
+    header.style.filter = "none";
+    header.style.visibility = "hidden";
+    overflowOn();
+  } else {
+    passcodeInput.value = "";
+    passcodeInput.placeholder = "Nop :(";
   }
 });

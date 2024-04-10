@@ -83,6 +83,10 @@ body {
   color: #fff;
 }
 
+.slide1 {
+  height: 110% !important;
+}
+
 .slide {
   display: none;
 }
@@ -348,7 +352,7 @@ h1 {
   align-items: center;
   flex-direction: column;
   position: absolute;
-  bottom: 50px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   display: none;
@@ -435,4 +439,50 @@ h1 {
 
 .lila {
   color: #a06cd5;
+}
+
+.password-container {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 250px;
+  gap: 10px;
+}
+
+.password-container.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.passcode {
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid #e5e5e5;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.passcode-button {
+  padding: 10px 20px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.passcode-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+.passcode-button:active {
+  background: #000;
+  color: #fff;
 }
